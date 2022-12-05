@@ -27,6 +27,38 @@
 
   <div id="app">
 
+    <header class="d-flex align-items-center">
+      <div class="container-lg">
+        <img src="assets/img/logo.png" alt="logo">
+      </div>
+    </header>
+
+    <main>
+      <div class="container-lg py-5">
+
+        <div class="row">
+
+          <div class="col-4 d-flex justify-content-center mb-5" v-for="(disk, index) in disks" :key="index">
+
+            <div class="card card-rc pt-3 border-0" style="width: 18rem;">
+              <div class="px-5">
+                <img :src="disk.poster" class="card-img-top rounded-0" :alt="disk.title">
+              </div>
+              <div class="card-body text-center text-white px-3">
+                <h5 class="fs-5">{{disk.title}}</h5>
+                <p class="mb-2 fs-6">{{disk.author}}</p>
+                <h5 class="fs-5">{{disk.year}}</h5>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+        
+      </div>
+
+    </main>
+
   </div>
   
 </body>
